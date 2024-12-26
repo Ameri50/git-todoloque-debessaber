@@ -1,0 +1,94 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guía Básica de Git</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Guía Básica de Git</h1>
+            <section>
+                <h2>Comandos Básicos</h2>
+                <ul>
+                    <li>
+                        <strong class="command">git init</strong>
+                        <div class="troubles">Inicializa un nuevo repositorio Git en el directorio actual. <br><strong>Dificultades:</strong> Asegúrate de estar en el directorio correcto; de lo contrario, puedes crear un repositorio en el lugar equivocado.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git clone &lt;url&gt;</strong>
+                        <div class="troubles">Clona un repositorio remoto en tu máquina local. <br><strong>Dificultades:</strong> Problemas de conexión a Internet o URL incorrecta pueden causar fallos en la clonación.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git status</strong>
+                        <div class="troubles">Muestra el estado actual del repositorio. <br><strong>Dificultades:</strong> Puede ser confuso si hay muchos cambios; es clave entender lo que se está rastreando.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git add &lt;archivo&gt;</strong>
+                        <div class="troubles">Agrega cambios de un archivo específico al área de preparación. <br><strong>Dificultades:</strong> Olvidar agregar archivos puede causar que no se incluyan en el commit.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git commit -m "Mensaje"</strong>
+                        <div class="troubles">Crea un nuevo commit con los cambios. <br><strong>Dificultades:</strong> Mensajes poco descriptivos pueden dificultar la comprensión del historial más tarde.</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Ramas</h2>
+                <ul>
+                    <li>
+                        <strong class="command">git branch</strong>
+                        <div class="troubles">Lista las ramas en el repositorio actual. <br><strong>Dificultades:</strong> No ver las ramas esperadas puede indicar que no se han creado correctamente.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git branch &lt;nombre-de-la-rama&gt;</strong>
+                        <div class="troubles">Crea una nueva rama con el nombre especificado. <br><strong>Dificultades:</strong> Nombres de ramas duplicados causarán errores.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git checkout &lt;nombre-de-la-rama&gt;</strong>
+                        <div class="troubles">Cambia a la rama especificada. <br><strong>Dificultades:</strong> No poder cambiar de rama si hay cambios sin confirmar en la rama actual.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git merge &lt;nombre-de-la-rama&gt;</strong>
+                        <div class="troubles">Mergia la rama especificada en la rama actual. <br><strong>Dificultades:</strong> Conflictos de fusión que pueden surgir si los cambios en ambas ramas afectan las mismas líneas.</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Repositorios Remotos</h2>
+                <ul>
+                    <li>
+                        <strong class="command">git remote -v</strong>
+                        <div class="troubles">Muestra los repositorios remotos configurados. <br><strong>Dificultades:</strong> Si no ves el remoto esperado, puede que no se haya configurado correctamente.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git push</strong>
+                        <div class="troubles">Envía los commits locales a un repositorio remoto. <br><strong>Dificultades:</strong> Problemas de autenticación pueden bloquear el envío.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git pull</strong>
+                        <div class="troubles">Descarga y fusiona cambios de un repositorio remoto. <br><strong>Dificultades:</strong> Conflictos similares a los conflictos de fusión locales.</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Cambios</h2>
+                <ul>
+                    <li>
+                        <strong class="command">git reset HEAD &lt;archivo&gt;</strong>
+                        <div class="troubles">Deshace los cambios en el área de preparación para un archivo específico. <br><strong>Dificultades:</strong> Podrías perder cambios si no se usa correctamente.</div>
+                    </li>
+                    <li>
+                        <strong class="command">git revert &lt;commit-hash&gt;</strong>
+                        <div class="troubles">Revierte un commit específico. <br><strong>Dificultades:</strong> Puede ser confuso entender cómo afecta a la historia del proyecto.</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
